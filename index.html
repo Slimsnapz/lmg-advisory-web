@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMG Advisory | Professional Advice. Practical Action. Measurable Results.</title>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load LMG Brand Configuration -->
+    <script src="./js/tailwind-config.js"></script>
+</head>
+<body class="bg-white text-lmg-graphite font-sans antialiased selection:bg-lmg-copper selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="w-full bg-white border-b border-gray-100 sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
+                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transform group-hover:scale-105 transition-transform duration-300">
+                        <path d="M50 10 L90 90 H10 Z" stroke="#17263A" stroke-width="8"/>
+                        <path d="M50 35 L75 80 H25 Z" stroke="#17263A" stroke-width="6"/>
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-lmg-navy tracking-tight leading-none">LMG</span>
+                        <span class="text-[0.65rem] font-bold text-lmg-coolgrey tracking-[0.2em] leading-none mt-1">ADVISORY</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex space-x-7 items-center">
+                    <a href="#about" class="text-sm font-medium text-lmg-graphite hover:text-lmg-copper transition-colors">About Firm</a>
+                    <a href="#practices" class="text-sm font-medium text-lmg-graphite hover:text-lmg-copper transition-colors">Practices</a>
+                    <a href="#convenings" class="text-sm font-medium text-lmg-graphite hover:text-lmg-copper transition-colors">Executive Breakfast</a>
+                    <a href="#insights" class="text-sm font-medium text-lmg-graphite hover:text-lmg-copper transition-colors">Insights & Evidence</a>
+                    
+                    <a href="/portal-login" class="text-xs font-semibold text-lmg-coolgrey hover:text-lmg-navy flex items-center gap-1.5 transition-colors border-l border-gray-200 pl-6 group">
+                        <svg class="w-4 h-4 group-hover:text-lmg-navy transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        Portal
+                    </a>
+                    <a href="#contact" class="bg-lmg-navy text-white px-6 py-2.5 text-sm font-medium hover:bg-lmg-graphite hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300">Engage LMG</a>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-lmg-navy hover:text-lmg-copper focus:outline-none transition-colors p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 top-20 z-40">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-lmg-graphite hover:text-lmg-copper hover:bg-gray-50">About Firm</a>
+                <a href="#practices" class="block px-3 py-3 text-base font-medium text-lmg-graphite hover:text-lmg-copper hover:bg-gray-50">Practices</a>
+                <a href="#convenings" class="block px-3 py-3 text-base font-medium text-lmg-graphite hover:text-lmg-copper hover:bg-gray-50">Executive Breakfast</a>
+                <a href="#insights" class="block px-3 py-3 text-base font-medium text-lmg-graphite hover:text-lmg-copper hover:bg-gray-50">Insights & Evidence</a>
+                <div class="border-t border-gray-100 my-2"></div>
+                <a href="/portal-login" class="block px-3 py-3 text-base font-medium text-lmg-coolgrey flex items-center gap-2 hover:text-lmg-navy">
+                    Secure Client Portal
+                </a>
+                <a href="#contact" class="block mt-4 w-full text-center bg-lmg-navy text-white px-5 py-3 text-base font-medium">Engage LMG</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="bg-lmg-navy text-white pt-20 pb-32 lg:pt-32 lg:pb-40 relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./images/istockphoto-1318116805-1024x1024.jpg');">
+        <div class="absolute inset-0 bg-lmg-navy/85 mix-blend-multiply"></div></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl transform transition-all duration-700 translate-y-0 opacity-100 animate-fade-in-up">
+                <p class="text-lmg-copper text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                    Professional advice. Practical action. Measurable results.
+                </p>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif font-light leading-tight mb-8">
+                    Diagnosing constraints. <br />
+                    Structuring growth.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 font-light leading-relaxed mb-10 max-w-2xl">
+                    LMG is a Nigerian multidisciplinary advisory firm combining rigorous business diagnosis, practical strategy, and implementation support.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-white text-lmg-navy px-8 py-4 text-center font-medium hover:bg-gray-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        Book a Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: ABOUT LMG -->
+    <section id="about" class="py-24 bg-lmg-ivory border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-bold text-lmg-copper uppercase tracking-widest block mb-2">The Firm</span>
+                    <h2 class="text-3xl font-serif text-lmg-navy mb-4">Close to the business. Honest with the client.</h2>
+                    <p class="text-lmg-coolgrey leading-relaxed">
+                        LMG was founded to deliver unvarnished commercial truth and actionable execution, avoiding bureaucratic advice that never leaves paper.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 border border-gray-200 hover:shadow-lg hover:border-lmg-copper transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-lg font-semibold text-lmg-navy mb-2">Mission & Approach</h3>
+                        <p class="text-sm text-lmg-graphite leading-relaxed mb-4">
+                            We identify specific operational, financial, and structural bottlenecks limiting enterprise growth, staying alongside leadership through full implementation.
+                        </p>
+                        <p class="text-xs text-lmg-coolgrey font-medium uppercase tracking-wider">Direct • Commercially Aware</p>
+                    </div>
+
+                    <div class="bg-white p-8 border border-gray-200 hover:shadow-lg hover:border-lmg-copper transition-all duration-300 transform hover:-translate-y-1">
+                        <h3 class="text-lg font-semibold text-lmg-navy mb-2">Governance & Standard</h3>
+                        <p class="text-sm text-lmg-graphite leading-relaxed mb-4">
+                            Institutional credibility requires strict governance. We do not make claims we cannot substantiate, guarantee financing we do not control, or apply generic solutions.
+                        </p>
+                        <p class="text-xs text-lmg-coolgrey font-medium uppercase tracking-wider">Evidence Before Exaggeration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 pt-12 border-t border-gray-200">
+                <h3 class="text-2xl font-serif text-lmg-navy mb-10">Leadership & Senior Advisers</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group bg-white p-8 border border-gray-100 hover:shadow-xl hover:border-lmg-navy transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-lmg-copper transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        <div class="w-16 h-16 bg-lmg-graphite mb-6 flex items-center justify-center text-white text-xs font-bold rounded-sm group-hover:bg-lmg-navy transition-colors">LMG</div>
+                        <h4 class="font-semibold text-lg text-lmg-navy">Managing Partner</h4>
+                        <p class="text-xs font-bold text-lmg-copper mb-4 uppercase tracking-wider">Strategy & Governance</p>
+                        <p class="text-sm text-lmg-coolgrey leading-relaxed group-hover:text-lmg-graphite transition-colors">Leads diagnostic engagements across corporate structure, turnaround strategy, and balance sheet alignment.</p>
+                    </div>
+                    
+                    <div class="group bg-white p-8 border border-gray-100 hover:shadow-xl hover:border-lmg-navy transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-lmg-copper transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        <div class="w-16 h-16 bg-lmg-graphite mb-6 flex items-center justify-center text-white text-xs font-bold rounded-sm group-hover:bg-lmg-navy transition-colors">LMG</div>
+                        <h4 class="font-semibold text-lg text-lmg-navy">Lead, Data & Intelligence</h4>
+                        <p class="text-xs font-bold text-lmg-copper mb-4 uppercase tracking-wider">Institutional Analytics & M&E</p>
+                        <p class="text-sm text-lmg-coolgrey leading-relaxed group-hover:text-lmg-graphite transition-colors">Directs proprietary value chain modeling, baseline diagnostics, and data infrastructure for transaction mandates.</p>
+                    </div>
+                    
+                    <div class="group bg-white p-8 border border-gray-100 hover:shadow-xl hover:border-lmg-navy transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-lmg-copper transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                        <div class="w-16 h-16 bg-lmg-graphite mb-6 flex items-center justify-center text-white text-xs font-bold rounded-sm group-hover:bg-lmg-navy transition-colors">LMG</div>
+                        <h4 class="font-semibold text-lg text-lmg-navy">Senior Adviser</h4>
+                        <p class="text-xs font-bold text-lmg-copper mb-4 uppercase tracking-wider">Agriculture & Trade</p>
+                        <p class="text-sm text-lmg-coolgrey leading-relaxed group-hover:text-lmg-graphite transition-colors">Specializes in export logistics, commercial processing off-take, and commodity aggregation structures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PRACTICE AREAS -->
+    <section id="practices" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <span class="text-xs font-bold text-lmg-copper uppercase tracking-widest block mb-2">Capabilities</span>
+                <h2 class="text-3xl font-serif text-lmg-navy mb-4">Core Advisory Practices</h2>
+                <p class="text-lg text-lmg-coolgrey max-w-2xl">
+                    Structured across four core message territories, anchored by deep diagnostic capability in agriculture, supply chains, and industrial manufacturing.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group border border-gray-100 p-8 hover:shadow-xl hover:border-transparent bg-white hover:bg-gray-50 transition-all duration-300 rounded-sm">
+                    <div class="w-12 h-1 mb-6 bg-lmg-copper group-hover:w-24 transition-all duration-500"></div>
+                    <h3 class="text-xl font-semibold text-lmg-navy mb-4">1. Business Performance & Diagnosis</h3>
+                    <p class="text-lmg-graphite leading-relaxed text-sm">
+                        Diagnose what is limiting the business and fix what matters. We deploy deep operational assessments on processing floors, distribution routes, and management hierarchies to eradicate cash leaks and margin decay.
+                    </p>
+                </div>
+                
+                <div class="group border border-gray-100 p-8 hover:shadow-xl hover:border-transparent bg-white hover:bg-gray-50 transition-all duration-300 rounded-sm">
+                    <div class="w-12 h-1 mb-6 bg-lmg-coolgrey group-hover:bg-lmg-copper group-hover:w-24 transition-all duration-500"></div>
+                    <h3 class="text-xl font-semibold text-lmg-navy mb-4">2. Capital Readiness & Investment</h3>
+                    <p class="text-lmg-graphite leading-relaxed text-sm">
+                        Strengthen businesses so they are positioned for appropriate institutional financing. We align accounting systems, debt-service capacity, board oversight, and legal structures before market approach.
+                    </p>
+                </div>
+                
+                <div class="group border border-gray-100 p-8 hover:shadow-xl hover:border-transparent bg-white hover:bg-gray-50 transition-all duration-300 rounded-sm">
+                    <div class="w-12 h-1 mb-6 bg-lmg-coolgrey group-hover:bg-lmg-copper group-hover:w-24 transition-all duration-500"></div>
+                    <h3 class="text-xl font-semibold text-lmg-navy mb-4">3. Market Access & Trade</h3>
+                    <p class="text-lmg-graphite leading-relaxed text-sm">
+                        Connect viable productive capacity with commercially verified domestic and international demand. We structure aggregation models across agricultural hubs and industrial corridors.
+                    </p>
+                </div>
+                
+                <div class="group border border-gray-100 p-8 hover:shadow-xl hover:border-transparent bg-white hover:bg-gray-50 transition-all duration-300 rounded-sm">
+                    <div class="w-12 h-1 mb-6 bg-lmg-coolgrey group-hover:bg-lmg-copper group-hover:w-24 transition-all duration-500"></div>
+                    <h3 class="text-xl font-semibold text-lmg-navy mb-4">4. Strategic Transactions</h3>
+                    <p class="text-lmg-graphite leading-relaxed text-sm">
+                        Facilitate strategic opportunities, asset disposals, joint ventures, and off-take partnerships where LMG maintains explicit advisory mandates and execution capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 3: THE LMG EXECUTIVE BREAKFAST -->
+    <section id="convenings" class="py-24 bg-lmg-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold text-lmg-copper uppercase tracking-widest block mb-2">Institutional Convenings</span>
+                    <h2 class="text-3xl font-serif mb-6 leading-snug">The LMG Executive Breakfast Series</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Every LMG convening maintains a defined strategic standard: a plausible path to relationship, actionable insight, commercial transaction, or measurable economic impact.
+                    </p>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-8">
+                        Closed-door, invitation-only boardroom roundtables connecting mid-market enterprise founders, commercial financiers, and trade policy decision-makers.
+                    </p>
+                    <a href="#contact" class="inline-block border border-lmg-copper text-lmg-copper px-6 py-3 text-xs font-semibold tracking-wider uppercase hover:bg-lmg-copper hover:text-white transition-colors">
+                        Request Boardroom Invitation
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-7 bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors duration-300 cursor-default">
+                    <div class="border-b border-white/10 pb-6 mb-6">
+                        <span class="text-xs text-lmg-copper font-mono uppercase">Upcoming Session • Q4 Briefing</span>
+                        <h3 class="text-xl font-serif mt-2 mb-2">Resolving Agri-Processing Working Capital in High-Inflation Regimes</h3>
+                        <p class="text-xs text-gray-400">Abuja Commercial District • Strictly Limited to 16 Executive Seats</p>
+                    </div>
+                    <div class="space-y-4 text-xs text-gray-300">
+                        <div class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lmg-copper"></span>
+                            <span>Executive Brief: Aggregate commodity inventory finance trends</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 rounded-full bg-lmg-copper"></span>
+                            <span>Case Review: Mitigating currency exposure in input procurement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: IMPACT & INSIGHTS -->
+    <section id="insights" class="py-24 bg-lmg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-lmg-copper uppercase tracking-widest block mb-2">The Evidence Engine</span>
+                    <h2 class="text-3xl font-serif text-lmg-navy mb-2">Impact & Strategic Insights</h2>
+                    <p class="text-sm text-lmg-coolgrey">Rigorous empirical diagnostics and published market briefs.</p>
+                </div>
+                <a href="#" class="text-sm font-semibold text-lmg-copper hover:text-lmg-navy transition-colors flex items-center gap-2 group">
+                    All Reports & Case Studies <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="#" class="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 block">
+                    <div class="h-48 bg-lmg-graphite overflow-hidden relative">
+                        <div class="absolute inset-0 bg-lmg-navy opacity-0 group-hover:opacity-20 transition-opacity z-10"></div>
+                        <img src="./images/istockphoto-2190225385-1024x1024.jpg" alt="Commercial grain operations" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 border-t-4 border-lmg-navy group-hover:border-lmg-copper transition-colors duration-300">
+                        <span class="text-[0.65rem] font-bold text-lmg-coolgrey uppercase tracking-[0.15em] mb-2 block">Case Study • Agribusiness</span>
+                        <h3 class="text-lg font-serif text-lmg-navy mb-3">Diagnostic & Turnaround: 2,500 MT Grain Facility</h3>
+                        <p class="text-xs text-lmg-graphite leading-relaxed mb-4">Eliminated 18% inventory decay through supply-chain tracking and warehouse inventory controls.</p>
+                        <span class="text-xs font-bold text-lmg-copper flex items-center gap-1 group-hover:gap-2 transition-all">Read Full Study <span aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+                
+                <a href="#" class="group bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 block">
+                    <div class="h-48 bg-lmg-coolgrey overflow-hidden relative">
+                        <div class="absolute inset-0 bg-lmg-navy opacity-0 group-hover:opacity-20 transition-opacity z-10"></div>
+                        <img src="./images/pexels-rdne-8123819.jpg" alt="Boardroom governance and strategy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 border-t-4 border-lmg-copper">
+                        <span class="text-[0.65rem] font-bold text-lmg-coolgrey uppercase tracking-[0.15em] mb-2 block">Strategic Report • Finance</span>
+                        <h3 class="text-lg font-serif text-lmg-navy mb-3">Capital Readiness Index: Mid-Market Industrial Firms</h3>
+                        <p class="text-xs text-lmg-graphite leading-relaxed mb-4">Empirical assessment of governance readiness across 40 agro-allied commercial entities.</p>
+                        <span class="text-xs font-bold text-lmg-copper flex items-center gap-1 group-hover:gap-2 transition-all">Download Report <span aria-hidden="true">&rarr;</span></span>
+                    </div>
+                </a>
+
+                <div class="group bg-lmg-navy text-white p-8 border-t-4 border-lmg-copper hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+                    <div>
+                        <span class="text-[0.65rem] font-bold text-lmg-copper uppercase tracking-[0.15em] mb-2 block">Institutional Tooling</span>
+                        <h3 class="text-xl font-serif mb-4">Enterprise Diagnostic Assessment</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-8">
+                            LMG deploys structured data collection to rapidly identify operational bottlenecks limiting scale.
+                        </p>
+                    </div>
+                    <a href="#contact" class="bg-white text-lmg-navy px-6 py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-gray-100 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+                        Initiate Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT FORM -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold text-lmg-copper uppercase tracking-widest block mb-2">Direct Engagement</span>
+                    <h2 class="text-3xl font-serif text-lmg-navy mb-6">Initiate an Advisory Mandate</h2>
+                    <p class="text-lmg-graphite mb-8 leading-relaxed text-sm">
+                        We work directly with owners, boards, and institutional investors seeking measurable operational and financial outcomes.
+                    </p>
+                    <div class="space-y-6 text-sm mt-12">
+                        <div>
+                            <h4 class="text-xs font-bold text-lmg-coolgrey uppercase tracking-widest mb-1">Corporate Office</h4>
+                            <p class="text-lmg-graphite">Abuja, Nigeria</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-lmg-coolgrey uppercase tracking-widest mb-1">Direct Inquiries</h4>
+                            <a href="mailto:advisory@lmg.com.ng" class="text-lmg-copper hover:text-lmg-navy font-medium transition-colors">advisory@lmg.com.ng</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 bg-white p-8 border border-gray-200 shadow-xl rounded-sm">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-lmg-coolgrey mb-2">Full Name</label>
+                                <input type="text" class="w-full border border-gray-300 p-3 bg-gray-50 text-sm focus:outline-none focus:border-lmg-navy focus:bg-white transition-colors" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-lmg-coolgrey mb-2">Corporate Email</label>
+                                <input type="email" class="w-full border border-gray-300 p-3 bg-gray-50 text-sm focus:outline-none focus:border-lmg-navy focus:bg-white transition-colors" placeholder="jane@company.com">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-lmg-coolgrey mb-2">Company / Entity Name</label>
+                                <input type="text" class="w-full border border-gray-300 p-3 bg-gray-50 text-sm focus:outline-none focus:border-lmg-navy focus:bg-white transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-lmg-coolgrey mb-2">Primary Sector</label>
+                                <select class="w-full border border-gray-300 p-3 bg-gray-50 text-sm focus:outline-none focus:border-lmg-navy focus:bg-white transition-colors appearance-none">
+                                    <option>Agriculture & Agribusiness</option>
+                                    <option>Logistics & Supply Chain</option>
+                                    <option>Financial Services</option>
+                                    <option>Manufacturing</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-lmg-coolgrey mb-2">Nature of Inquiry / Constraint</label>
+                            <textarea rows="4" class="w-full border border-gray-300 p-3 bg-gray-50 text-sm focus:outline-none focus:border-lmg-navy focus:bg-white transition-colors" placeholder="Briefly describe the business constraint or advisory mandate..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-lmg-navy text-white py-4 font-semibold text-xs uppercase tracking-widest hover:bg-lmg-graphite hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-lmg-graphite text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 border-b border-gray-600 pb-12">
+                <div class="md:col-span-2">
+                    <span class="text-xl font-bold tracking-tight">LMG ADVISORY</span>
+                    <p class="text-gray-400 text-xs max-w-sm leading-relaxed mt-4">
+                        A Nigerian multidisciplinary advisory firm combining rigorous business diagnosis, practical strategy, and implementation support.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-300 uppercase tracking-widest mb-4">Firm</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">Mission & Governance</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">Leadership & Advisers</a></li>
+                        <li><a href="#convenings" class="hover:text-white transition-colors">Executive Breakfast</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-300 uppercase tracking-widest mb-4">Practices</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#practices" class="hover:text-white transition-colors">Business Performance</a></li>
+                        <li><a href="#practices" class="hover:text-white transition-colors">Capital Readiness</a></li>
+                        <li><a href="#practices" class="hover:text-white transition-colors">Market Access</a></li>
+                        <li><a href="#practices" class="hover:text-white transition-colors">Transactions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-gray-300 uppercase tracking-widest mb-4">Systems</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="/portal-login" class="hover:text-white transition-colors">Client Portal</a></li>
+                        <li><a href="#insights" class="hover:text-white transition-colors">Evidence Engine</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Direct Inquiries</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 LMG Advisory Ltd. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition-colors">Terms of Engagement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Interactive JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
